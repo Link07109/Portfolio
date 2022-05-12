@@ -16,6 +16,7 @@
     --big-text-color: hsl(180, 58%, 90%);
 }
 
+/* Put all the .dark-theme stuff in here if I ever decide to use this */
 /* @media (prefers-color-scheme: dark) { } */
 
 body {
@@ -29,10 +30,21 @@ body {
     flex-direction: column; */
 }
 
+strong {
+    font-weight: 900;
+}
+
+/* Might change this to a class so that .p-color doesn't need to exist */
+h1, h2, h3 {
+	color: var(--heading-color);
+}
+
+/* Useful when wanting to use the normal color on headings */
 .p-color {
     color: var(--color);
 }
 
+/* NavBar inner container, houses all the content */
 .header {
     display: flex;
     gap: 2em;
@@ -42,16 +54,16 @@ body {
     margin: 0 auto;
 }
 
+/* NavBar outer container, will always stay at the top of the screen */
 .header-container {
     position: fixed;
-    /* top: 0; */
-    min-width: 100vw;
+    width: 100vw;
 }
 
-/* this makes it so that the scrollbar doesnt appear on the header,
+/* This makes it so that the scrollbar doesn't appear on the header,
     instead only showing up on the main content below it */
 .scrollable-main {
-    /* make scrollable content be under the header */
+    /* move below the header */
     position: absolute;
     top: 84px;
     bottom: 0;
@@ -68,10 +80,7 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
-	color: var(--heading-color);
-}
-
+/* Basic flexbox container that centers its children */
 .center-container {
     display: flex;
     flex-direction: column;
@@ -101,6 +110,7 @@ button:hover {
     background-color: hsl(0 0% 50% / 0.25);
 }
 
+/* Theme toggle tooltip */
 #theme-toggle::after {
     background-color: var(--color);
     color: var(--bg-color);
@@ -118,22 +128,20 @@ button:hover {
     border-radius: .25em;
 
     opacity: 0;
+    transform-origin: top;
     transform: scale(0);
     transition: transform 70ms linear, opacity 70ms linear;
 }
 
+/* Show theme toggle tooltip on mouse hover */
 #theme-toggle:hover::after {
-    opacity: 1;
+    opacity: 0.7;
     transform: scale(1);
-}
-
-strong {
-    font-weight: 900;
 }
 
 .fancy-big-text {
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 500ms;
     -webkit-text-stroke: 4px var(--big-text-color);
     font-size: 15rem;
     text-align: center;
@@ -147,12 +155,14 @@ strong {
       15px 15px 0px hsl(310, 99%, 45%),
       20px 20px 0px hsl(320, 99%, 46%),
       25px 25px 0px hsl(335, 97%, 49%),
-      45px 45px 10px hsl(257, 58%, 37%);
+      40px 40px 7px hsl(257, 58%, 37%);
+      /* 45px 45px 10px */
 }
 
 .fancy-big-text:hover {
     font-variation-settings: "weight" 100, "ital" 0;
     text-shadow: none;
+    color: var(--big-text-color);
 }
 
 .fancy-link {
@@ -199,13 +209,14 @@ strong {
     margin: 0 auto;
 }
 
+/* Will only ever need to use for complex layous,
+    flexbox can be used instead for simple ones */
 .card-grid {
     display: grid;
     gap: 1.5rem;
     grid-auto-columns: 1fr;
 
     padding-block: 2rem;
-    /* width: min(95%, 70rem); */
     min-width: 80vw;
     margin: 0 auto;
 }
@@ -214,6 +225,14 @@ strong {
     padding: 2rem;
     border-radius: 0.5rem;
     background-color: var(--card-bg-color);
+    box-shadow: 5px 5px 5px grey;
+    transition: ease 150ms;
+    /* border: 1px inset var(--color); */
+}
+
+.card:hover {
+    transform: translate(5px, 5px);
+    box-shadow: none;
 }
 
 @media (min-width: 40em) {
