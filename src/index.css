@@ -200,9 +200,10 @@ button:hover {
 
 .card-flexbox {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 
     padding-block: 2rem;
     min-width: 80vw;
