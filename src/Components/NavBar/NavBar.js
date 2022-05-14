@@ -9,7 +9,7 @@ const NavBar = props => {
     return (
         <div className='header-container'>
             <header className='header'>
-                <h2 className='fancy-link'>{props.headerText}</h2>
+                <h2 className='fancy-link'>Home</h2>
                 <h3 className='fancy-link'>Projects</h3>
                 <h3 className='fancy-link'>About</h3>
                 <h3 className='fancy-link'>Contact</h3>

@@ -1,33 +1,29 @@
 import React, { Suspense } from 'react'
 
-const Card = React.lazy(() => import('../../Components/Card/Card'))
 const NavBar = React.lazy(() => import('../../Components/NavBar'))
+const Footer = React.lazy(() => import('../../Components/Footer'))
 const CoolComponent = React.lazy(() => import('../../Components/CoolComponent'))
 
 const Home = props => {
     return (
-        <Suspense fallback={<h1 className='center' style={{minHeight: `100vh`}}>Loading...</h1>}>
+        <Suspense fallback={<h1 className='center-container' style={{minHeight: `100vh`}}>Loading...</h1>}>
             
-            <NavBar headerText={props.headerText} />
+            <NavBar />
             
             <main className="scrollable-main">
                 <div className='center-container'>
+
                     <h1 className='fancy-big-text'>Ivan Valadez</h1>
+
+                    <img style={{borderRadius: "50%"}} width="400px" height="400px" src="https://cdn.discordapp.com/attachments/831304128033587270/974915746121547846/test.jfif" alt="me"></img>
                     <CoolComponent cool={props.cool} />
 
-                    <div className='card-flexbox'>
-                    {/* <div className='card-grid'> */}
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                    </div>
-
                     <p>Random text here for you to <strong className='fancy-link'>Fuck With.</strong></p>
+
+                    <Footer />
+
                 </div>
             </main>
-            
             
         </Suspense>
     )

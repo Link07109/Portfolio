@@ -6,18 +6,18 @@
     --heading-color: hsl(255, 50%, 30%);
     --big-text-color: hsl(180, 58%, 50%);
 
-    --shadow-color: grey;
+    --shadow-color: hsl(0, 0%, 50%);
 }
 
 .dark-theme {
-    --bg-color: hsl(0, 0%, 13%);
+    --bg-color: hsl(249, 11%, 12%);
     --color: hsl(0, 0%, 100%);
 
     --card-bg-color: hsl(0, 0%, 25%);
     --heading-color: hsl(255, 50%, 90%);
     --big-text-color: hsl(180, 58%, 90%);
 
-    --shadow-color: black;
+    --shadow-color: hsl(0, 0%, 50%);
 }
 
 /* Put all the .dark-theme stuff in here if I ever decide to use this */
@@ -64,12 +64,33 @@ h1, h2, h3 {
     width: 100vw;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    
+    padding-block: 1em;
+}
+
+.footer-container {
+    width: 50%;
+}
+
+a, a:visited {
+    color: var(--heading-color);
+}
+
+/* a:hover {
+    background-color: grey;
+} */
+
 /* This makes it so that the scrollbar doesn't appear on the header,
     instead only showing up on the main content below it */
 .scrollable-main {
     /* move below the header */
     position: absolute;
-    top: 84px;
+    top: 86px;
     bottom: 0;
 
     /* center the children */
@@ -84,12 +105,11 @@ h1, h2, h3 {
     overflow-x: hidden;
 }
 
-/* Basic flexbox container that centers its children */
+/* Basic container that centers its children */
 .center-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* used to be flex but grid is easier */
+    display: grid;
+    place-items: center;
 }
 
 button {
@@ -147,12 +167,13 @@ button:hover {
     cursor: pointer;
     transition: all 500ms;
     -webkit-text-stroke: 4px var(--big-text-color);
-    font-size: 15rem;
+    font-size: 10rem;
     text-align: center;
     color: transparent;
     font-family: "Meta", sans-serif;
 
     margin-block: 0.25em;
+    margin-inline: 0.25em;
 
     font-variation-settings: "weight" 900, "ital" 1;
     text-shadow: 10px 10px 0px hsl(185, 93%, 41%),
@@ -184,12 +205,14 @@ button:hover {
     background-size: 100% 3px;
 }
 
+/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
+    /* box-shadow: inset 0 0 3px grey; */
+    background-color: var(--card-bg-color);
     border-radius: 10px;
 }
 
@@ -199,8 +222,23 @@ button:hover {
 }
 
 /* Figure out how to make this color darker using the variable */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
     background-color: var(--heading-color);
+} */
+
+.card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--card-bg-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+    transition: ease 150ms;
+    border: 1px inset var(--color);
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translate(5px, 5px);
+    box-shadow: none;
 }
 
 .card-flexbox {
@@ -215,8 +253,6 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Will only ever need to use for complex layous,
-    flexbox can be used instead for simple ones */
 .card-grid {
     display: grid;
     gap: 1.5rem;
@@ -227,20 +263,7 @@ button:hover {
     margin: 0 auto;
 }
 
-.card {
-    padding: 2rem;
-    border-radius: 0.5rem;
-    background-color: var(--card-bg-color);
-    box-shadow: 5px 5px 5px var(--shadow-color);
-    transition: ease 150ms;
-    /* border: 1px inset var(--color); */
-}
-
-.card:hover {
-    transform: translate(5px, 5px);
-    box-shadow: none;
-}
-
+/* Responsive Layout */
 @media (min-width: 40em) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
