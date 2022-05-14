@@ -19,6 +19,7 @@ const NavBar = props => {
                         <button onClick={() => {
                             setDarkTheme(!darkTheme)
                             changeTheme(darkTheme ? themes.light : themes.dark)
+                            document.getElementById("theme-toggle").ariaLabel = darkTheme ? "Turn off the lights" : "Turn on the lights"
                         }}
                         id='theme-toggle' aria-label='Turn off the lights.'>
                             <FontAwesomeIcon size='xl' icon={darkTheme ? faSun : faMoon} inverse={darkTheme}></FontAwesomeIcon>
