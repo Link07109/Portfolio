@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import { ThemeContext, themes } from '../../Contexts/ThemeContext'
@@ -9,10 +11,9 @@ const NavBar = props => {
     return (
         <div className='header-container'>
             <header className='header'>
-                <h2 className='fancy-link'>Home</h2>
-                <h3 className='fancy-link'>Projects</h3>
-                <h3 className='fancy-link'>About</h3>
-                <h3 className='fancy-link'>Contact</h3>
+                <Link to='/'><h2 className='fancy-link'>Home</h2></Link>
+                <Link to='/projects'><h3 className='fancy-link'>Projects</h3></Link>
+                <Link to='/about'> <h3 className='fancy-link'>About</h3></Link>
 
                 <ThemeContext.Consumer className='center'>
                     {({ changeTheme }) => (

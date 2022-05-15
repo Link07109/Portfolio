@@ -77,6 +77,13 @@ h1, h2, h3 {
     width: 50%;
 }
 
+.footer-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
 a, a:visited {
     color: var(--heading-color);
 }
@@ -228,6 +235,7 @@ button:hover {
 
 .card {
     padding: 2rem;
+    margin-inline: 2em;
     border-radius: 0.5rem;
     background-color: var(--card-bg-color);
     box-shadow: 5px 5px 5px var(--shadow-color);
@@ -264,7 +272,7 @@ button:hover {
 }
 
 /* Responsive Layout */
-@media (min-width: 40em) {
+/* @media (min-width: 40em) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -286,4 +294,4 @@ button:hover {
     .card-grid {
         grid-template-columns: repeat(5, 1fr);
     }
-}
+} */
