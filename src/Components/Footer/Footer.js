@@ -9,11 +9,11 @@ const Footer = props => {
 
             <footer className='footer'>
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "0.5em"}}>
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon size='xl' icon={faGithub} />
                     <a href="https://github.com/Link07109" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
-                <div style={{display: "flex", alignItems: "center", gap: "0.5em"}}>
-                    <FontAwesomeIcon icon={faLinkedin} />
+                <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "0.5em"}}>
+                    <FontAwesomeIcon size='xl' icon={faLinkedin} />
                     <a href="https://linkedin.com/in/valadez-sei" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </footer>
