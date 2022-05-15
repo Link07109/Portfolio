@@ -272,7 +272,7 @@ button:hover {
 }
 
 /* Responsive Layout */
-/* @media (min-width: 40em) {
+@media (min-width: 40em) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -284,7 +284,7 @@ button:hover {
     }
 }
 
-@media (min-width: 60em) {
+/* @media (min-width: 60em) {
     .card-grid {
         grid-template-columns: repeat(4, 1fr);
     }
