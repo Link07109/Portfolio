@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[720],{720:(e,n,o)=>{o.r(n),o.d(n,{default:()=>l});var t=o(294);const l=function(e){return t.createElement(t.Fragment,null,t.createElement("h2",{className:"fancy-link"},"This is a cool and very ",e.cool," component"))}}}]);
