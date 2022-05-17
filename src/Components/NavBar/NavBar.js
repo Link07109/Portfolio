@@ -11,10 +11,18 @@ const NavBar = () => {
 
     return (
         <header className='header'>
-            <button className='nav-button' onClick={() => navigate('/')}><h2 className='link fancy-link'>Home</h2></button>
-            <button className='nav-button' onClick={() => navigate('/projects')}><h2 className='link fancy-link'>Projects</h2></button>
-            <button className='nav-button' onClick={() => navigate('/about')}><h2 className='link fancy-link'>About</h2></button>
-            <button className='nav-button' onClick={() => navigate('/contact')}><h2 className='link fancy-link'>Contact</h2></button>
+            <button className='nav-button' onClick={() => navigate('/')}>
+                <h2 className='link fancy-link'>Home</h2>
+            </button>
+            <button className='nav-button' onClick={() => navigate('/projects')}>
+                <h2 className='link fancy-link'>Projects</h2>
+            </button>
+            <button className='nav-button' onClick={() => navigate('/about')}>
+                <h2 className='link fancy-link'>About</h2>
+            </button>
+            <button className='nav-button' onClick={() => navigate('/contact')}>
+                <h2 className='link fancy-link'>Contact</h2>
+            </button>
             
             <ThemeContext.Consumer className='center'>
                 {({ changeTheme }) => (
