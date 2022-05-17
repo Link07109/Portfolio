@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { themes, ThemeContext } from './ThemeContext'
 
 const ThemeContextWrapper = props => {
-    const [theme, setTheme] = useState(themes.light)
+    const [theme, setTheme] = useState(themes.dark)
 
     const changeTheme = theme => {
         setTheme(theme)
@@ -15,7 +15,6 @@ const ThemeContextWrapper = props => {
                 document.body.classList.remove('light-theme')
                 break
             case themes.light:
-            default:
                 document.body.classList.add('light-theme')
                 document.body.classList.remove('dark-theme')
                 break

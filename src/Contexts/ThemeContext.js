@@ -6,6 +6,6 @@ export const themes = {
 }
 
 export const ThemeContext = createContext({
-    theme: themes.light,
+    theme: themes.dark,
     changeTheme: () => {}
 })

@@ -1,11 +1,10 @@
 import React from 'react'
 
-const Page404 = props => {
+const Page404 = () => {
     return (
-        <React.Fragment>
-            <h2>Error 404: Page Not Found.</h2>
-            <h3 className='fanct-link'>Go back to home.</h3>
-        </React.Fragment>
+        <div className='center-container' style={{height: '81vh'}}>
+            <h2>Error 404: Page Not Found</h2>
+        </div>
     )
 }
 

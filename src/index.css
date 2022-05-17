@@ -1,27 +1,36 @@
 .light-theme {
     --bg-color: hsl(0, 23%, 95%);
-    --color:hsl(0, 0%, 0%);
+    --color:black;
+    /* --color: hsl(249, 11%, 12%); */
 
     --card-bg-color: hsl(0, 23%, 90%);
     --heading-color: hsl(255, 50%, 30%);
-    --big-text-color: hsl(180, 58%, 50%);
+    /* --big-text-color: hsl(180, 58%, 50%); */
+    --big-text-color: hsl(221, 69%, 30%);
+    --tooltip-color: black;
 
     --shadow-color: hsl(0, 0%, 50%);
 }
 
 .dark-theme {
-    --bg-color: hsl(249, 11%, 12%);
-    --color: hsl(0, 0%, 100%);
+    /* --bg-color: hsl(231, 15%, 18%); */
+    --color: hsl(180, 58%, 90%);
 
-    --card-bg-color: hsl(0, 0%, 25%);
-    --heading-color: hsl(255, 50%, 90%);
-    --big-text-color: hsl(180, 58%, 90%);
+    /* github colors: */
+    --bg-color: hsl(216, 28%, 7%);
+    --card-bg-color: hsl(215, 21%, 11%);
 
-    --shadow-color: hsl(0, 0%, 50%);
+    /* --card-bg-color: hsl(231, 15%, 18%); */
+    --heading-color: hsl(265, 89%, 90%);
+    --big-text-color: var(--color);
+    --tooltip-color: white;
+
+    --shadow-color: hsl(231, 15%, 18%);
 }
 
-/* Put all the .dark-theme stuff in here if I ever decide to use this */
+/* Put all the .dark-theme / .light-theme stuff in here if I ever decide to use this */
 /* @media (prefers-color-scheme: dark) { } */
+/* @media (prefers-color-scheme: light) { } */
 
 body {
     background-color: var(--bg-color);
@@ -29,9 +38,11 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
+}
 
-    /* display: flex;
-    flex-direction: column; */
+hr {
+    background-color: var(--color);
+    border-style: solid;
 }
 
 strong {
@@ -48,20 +59,15 @@ h1, h2, h3 {
     color: var(--color);
 }
 
-/* NavBar inner container, houses all the content */
 .header {
     display: flex;
-    gap: 2em;
     justify-content: center;
     align-items: center;
+    gap: 2em;
 
     margin: 0 auto;
-}
-
-/* NavBar outer container, will always stay at the top of the screen */
-.header-container {
-    position: fixed;
-    width: 100vw;
+    border-bottom: solid;
+    width: 100%;
 }
 
 .footer {
@@ -85,19 +91,24 @@ h1, h2, h3 {
 }
 
 a, a:visited {
+    text-decoration: none;
     color: var(--heading-color);
 }
 
-/* a:hover {
-    background-color: grey;
-} */
+a:hover {
+    color: var(--color);
+}
+
+.link:hover {
+    color: var(--color);
+}
 
 /* This makes it so that the scrollbar doesn't appear on the header,
     instead only showing up on the main content below it */
 .scrollable-main {
     /* move below the header */
     position: absolute;
-    top: 86px;
+    top: 70px;
     bottom: 0;
 
     /* center the children */
@@ -120,7 +131,15 @@ a, a:visited {
 }
 
 button {
+    color: var(--heading-color);
+    background-color: var(--card-bg-color);
+    border-style: solid;
+    padding: 0 1em;
+}
+
+#theme-toggle {
     cursor: pointer;
+    color: var(--tooltip-color);
     background-color: var(--bg-color);
     border: 0;
     padding: 0.5rem;
@@ -128,22 +147,20 @@ button {
     
     opacity: 0.75;
     transition: background-color 70ms linear;
-}
 
-#theme-toggle {
     height: 40px;
     width: 40px;
     position: relative;
 }
 
-button:hover {
+#theme-toggle:hover {
     opacity: 1;
     background-color: hsl(0 0% 50% / 0.25);
 }
 
 /* Theme toggle tooltip */
 #theme-toggle::after {
-    background-color: var(--color);
+    background-color: var(--tooltip-color);
     color: var(--bg-color);
 
     content: attr(aria-label);
@@ -172,17 +189,17 @@ button:hover {
 
 .fancy-big-text {
     cursor: pointer;
-    transition: all 500ms;
-    -webkit-text-stroke: 4px var(--big-text-color);
-    font-size: 10rem;
-    text-align: center;
     color: transparent;
-    font-family: "Meta", sans-serif;
+    margin: 0.25em;
 
-    margin-block: 0.25em;
-    margin-inline: 0.25em;
+    font-family: 'Meta', sans-serif;
+    font-size: 6rem;
+    text-align: center;
+    -webkit-text-stroke: 4px var(--big-text-color);
+    
 
-    font-variation-settings: "weight" 900, "ital" 1;
+    transition: all 500ms;
+    font-variation-settings: 'weight' 900, 'ital' 1;
     text-shadow: 10px 10px 0px hsl(185, 93%, 41%),
       15px 15px 0px hsl(310, 99%, 45%),
       20px 20px 0px hsl(320, 99%, 46%),
@@ -192,20 +209,20 @@ button:hover {
 }
 
 .fancy-big-text:hover {
-    font-variation-settings: "weight" 100, "ital" 0;
-    text-shadow: none;
     color: var(--big-text-color);
+    font-variation-settings: 'weight' 100, 'ital' 0;
+    text-shadow: none;
 }
 
 .fancy-link {
     cursor: pointer;
-    background-image: linear-gradient(90deg, red, blue);
-    background-size: 0% 3px;
+    text-decoration: none;
+
+    background-image: linear-gradient(90deg, var(--color), var(--heading-color));
     background-repeat: no-repeat;
     background-position: left bottom;
+    background-size: 0% 3px;
     transition: background-size 200ms ease;
-
-    text-decoration: none;
 }
 
 .fancy-link:hover {
@@ -214,7 +231,7 @@ button:hover {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 0.75em;
 }
 
 ::-webkit-scrollbar-track {
@@ -229,7 +246,7 @@ button:hover {
 }
 
 /* Figure out how to make this color darker using the variable */
-/* ::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:active {
     background-color: var(--heading-color);
 } */
 
@@ -261,7 +278,7 @@ button:hover {
     margin: 0 auto;
 }
 
-.card-grid {
+.project-grid {
     display: grid;
     gap: 1.5rem;
     grid-auto-columns: 1fr;
@@ -273,25 +290,13 @@ button:hover {
 
 /* Responsive Layout */
 @media (min-width: 40em) {
-    .card-grid {
+    .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 50em) {
-    .card-grid {
+    .project-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
-/* @media (min-width: 60em) {
-    .card-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (min-width: 70em) {
-    .card-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-} */
