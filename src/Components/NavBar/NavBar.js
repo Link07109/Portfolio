@@ -10,10 +10,10 @@ const NavBar = () => {
 
     return (
         <header className='header'>
-            <Link to='/'><h3 className='link fancy-link'>Home</h3></Link>
-            <Link to='/projects'><h3 className='link fancy-link'>Projects</h3></Link>
-            <Link to='/about'> <h3 className='link fancy-link'>About</h3></Link>
-            <Link to='/contact'> <h3 className='link fancy-link'>Contact</h3></Link>
+            <Link to='/Portfolio'><h3 className='link fancy-link'>Home</h3></Link>
+            <Link to='/Portfolio/projects'><h3 className='link fancy-link'>Projects</h3></Link>
+            <Link to='/Portfolio/about'> <h3 className='link fancy-link'>About</h3></Link>
+            <Link to='/Portfolio/contact'> <h3 className='link fancy-link'>Contact</h3></Link>
 
             <ThemeContext.Consumer className='center'>
                 {({ changeTheme }) => (
