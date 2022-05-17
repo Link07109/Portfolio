@@ -7,6 +7,7 @@ const NavBar = React.lazy(() => import('../../Components/NavBar'))
 const Footer = React.lazy(() => import('../../Components/Footer'))
 
 const Page = () => {
+
     return (
         <ThemeContextWrapper>
             <Suspense fallback={<h1 className='center-container' style={{minHeight: '100%', minWidth: '100%'}}>Loading...</h1>}>

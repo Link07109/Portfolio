@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     return (
@@ -22,4 +22,4 @@ const About = () => {
     )
 }
 
-export default About
+export default memo(About)

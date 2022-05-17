@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Card = React.lazy(() => import('../../Components/Card/Card'))
 
@@ -37,4 +37,4 @@ const Projects = () => {
     )
 }
 
-export default Projects;
+export default memo(Projects);

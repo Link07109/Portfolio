@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
@@ -7,14 +7,15 @@ import { ThemeContext, themes } from '../../Contexts/ThemeContext'
 
 const NavBar = () => {
     const [darkTheme, setDarkTheme] = useState(true)
+    const navigate = useNavigate()
 
     return (
         <header className='header'>
-            <Link to='/Portfolio'><h3 className='link fancy-link'>Home</h3></Link>
-            <Link to='/Portfolio/projects'><h3 className='link fancy-link'>Projects</h3></Link>
-            <Link to='/Portfolio/about'> <h3 className='link fancy-link'>About</h3></Link>
-            <Link to='/Portfolio/contact'> <h3 className='link fancy-link'>Contact</h3></Link>
-
+            <button className='nav-button' onClick={() => navigate('/')}><h2 className='link fancy-link'>Home</h2></button>
+            <button className='nav-button' onClick={() => navigate('/projects')}><h2 className='link fancy-link'>Projects</h2></button>
+            <button className='nav-button' onClick={() => navigate('/about')}><h2 className='link fancy-link'>About</h2></button>
+            <button className='nav-button' onClick={() => navigate('/contact')}><h2 className='link fancy-link'>Contact</h2></button>
+            
             <ThemeContext.Consumer className='center'>
                 {({ changeTheme }) => (
                     <button onClick={() => {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
@@ -19,4 +19,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default memo(Contact)

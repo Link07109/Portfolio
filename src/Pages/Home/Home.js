@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Home = () => {
 
@@ -14,9 +14,9 @@ const Home = () => {
             
             <h2>Computer Science Student at UNC Charlotte</h2>
 
-            <p>Random text here for you to <strong className='fancy-link'>Fuck With.</strong></p>
+            {/* <p>Some text here <strong className='fancy-link'>Maybe.</strong></p> */}
         </>
     )
 }
 
-export default Home
+export default memo(Home)

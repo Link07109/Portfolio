@@ -134,7 +134,12 @@ button {
     color: var(--heading-color);
     background-color: var(--card-bg-color);
     border-style: solid;
-    padding: 0 1em;
+    /* padding: 0 1em; */
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
 }
 
 #theme-toggle {

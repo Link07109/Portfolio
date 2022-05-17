@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Page404 = () => {
     return (
@@ -8,4 +8,4 @@ const Page404 = () => {
     )
 }
 
-export default Page404
+export default memo(Page404)
