@@ -90,6 +90,10 @@ h1, h2, h3 {
     gap: 0.5em;
 }
 
+.red {
+    color: red;
+}
+
 a, a:visited {
     text-decoration: none;
     color: var(--heading-color);
@@ -289,7 +293,6 @@ button {
     grid-auto-columns: 1fr;
 
     padding-block: 2rem;
-    min-width: 80vw;
     margin: 0 auto;
 }
 
