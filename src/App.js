@@ -25,19 +25,21 @@ const App = () => {
     // }]
 
     return (
-        <MemoryRouter>
-            <Routes>
-                <Route path='/' element={<Page />} >
-                    <Route index='true' element={<Home />} />
+        <React.StrictMode>
+            <MemoryRouter>
+                <Routes>
+                    <Route path='/' element={<Page />} >
+                        <Route index='true' element={<Home />} />
 
-                    <Route path='/projects' element={<Projects />} />
-                    <Route path='/about' element={<About />} />
-                    <Route path='/contact' element={<Contact />} />
+                        <Route path='/projects' element={<Projects />} />
+                        <Route path='/about' element={<About />} />
+                        <Route path='/contact' element={<Contact />} />
 
-                    <Route path='*' element={<Page404 />} />
-                </Route>
-            </Routes>
-        </MemoryRouter>
+                        <Route path='*' element={<Page404 />} />
+                    </Route>
+                </Routes>
+            </MemoryRouter>
+        </React.StrictMode>
     )
 }
 

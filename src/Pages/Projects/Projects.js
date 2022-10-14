@@ -17,21 +17,22 @@ const Projects = () => {
                 <Card priv='true' title='Slime Slayer' description='2D Metroidvania made with Godot' link='https://github.com/Link07109/SlimeSlayer' />
             </div>
 
-            <br />
+            <hr />
 
             <h3 className='p-color' id='web-dev'>Web/Mobile Dev</h3>
             <div className='project-grid'>
-                <Card title='FalconScoutPit' description='SPA written in Ionic Angular' link='https://github.com/Link07109/FalconScoutPit' />
-                <Card priv='true' title='FalconScoutApp' description='Mobile App written in React Native' link='https://github.com/FRC5190/FalconScoutApp' />
-                <Card title='FalconScouter' description='Mobile App written in Ionic Angular' link='https://github.com/Link07109/FalconScoutApp' />
-                <Card priv='true' title='2018Scouting' description='Android App written in Java' link='https://github.com/FRC5190/2018Scouting' />
+                <Card title='Falcon Scout Pit' description='SPA written in Ionic Angular' link='https://github.com/Link07109/FalconScoutPit' />
+                <Card priv='true' title='Falcon Scout App' description='Mobile App written in React Native' link='https://github.com/FRC5190/FalconScoutApp' />
+                <Card title='Falcon Scouter' description='Mobile App written in Ionic Angular' link='https://github.com/Link07109/FalconScoutApp' />
+                <Card priv='true' title='2018 Scouting' description='Android App written in Java' link='https://github.com/FRC5190/2018Scouting' />
             </div>
 
-            <br />
+            <hr />
 
             <h3 className='p-color' id='robotics'>Robotics</h3>
             <div className='project-grid'>
-                <Card title='MiniComp2020' description='FRC Robot Code written in Kotlin' link='https://github.com/Link07109/MiniComp2020' />
+                <Card title='Mini Comp 2020' description='FRC Robot Code written in Kotlin' link='https://github.com/Link07109/MiniComp2020' />
+                <Card priv='true' title='2017 Vision' description='FRC Robot Code written in Java' />
             </div>
         </>
     )

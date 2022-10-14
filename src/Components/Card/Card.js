@@ -7,28 +7,25 @@ const Card = ({ title, description, link, priv }) => {
 
     return (
         <article className='card center-container'>
-            <div>
-                <h3>{title}</h3>
-            </div>
+            <h3>{title}</h3>
             
             <p>{description}</p>
-            <div>
-                {priv && <div className='footer-div red'>
-                    <FontAwesomeIcon size='xl' icon={faGithub} />
-                    <p>Source Private</p> 
-                </div>}
 
-                {!priv && <>
-                    <FontAwesomeIcon size='xl' icon={faGithub} />
-                    <a style={{marginLeft: '0.5em'}}
-                        className='fancy-link'
-                        href={link}
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        Source
-                    </a>
-                </>}
-            </div>
+            {priv && <div className='footer-div red'>
+                <FontAwesomeIcon size='xl' icon={faGithub} />
+                <a className='red disabled'>Source Private</a>
+            </div>}
+
+            {!priv && <div className='footer-div'>
+                <FontAwesomeIcon size='xl' icon={faGithub} />
+                <a className='fancy-link'
+                    href={link}
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    Source
+                </a>
+            </div>}
+            
         </article>
     )
 }

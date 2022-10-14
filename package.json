@@ -13,7 +13,7 @@
   },
   "author": "Ivan Valadez",
   "license": "ISC",
-  "repository": "",
+  "repository": "https://github.com/Link07109/Portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",

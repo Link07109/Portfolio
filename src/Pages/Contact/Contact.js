@@ -9,11 +9,11 @@ const Contact = () => {
             <h2>Contact</h2>
             <div className='footer-div'>
                 <FontAwesomeIcon size='xl' icon={faPhone} />
-                <p target='_blank' rel='noopener noreferrer'>(919) 935-8196</p>
+                <p>(919) 935-8196</p>
             </div>
             <div className='footer-div'>
                 <FontAwesomeIcon size='xl' icon={faEnvelope} />
-                <a className='fancy-link' href='https://valadez.sei@gmail.com' target='_blank' rel='noopener noreferrer'>valadez.sei@gmail.com</a>
+                <a className='fancy-link' href='mailto:valadez.sei@gmail.com' target='_blank' rel='noopener noreferrer'>valadez.sei@gmail.com</a>
             </div>
         </>
     )
