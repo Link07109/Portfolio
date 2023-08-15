@@ -6,7 +6,7 @@
     --card-bg-color: hsl(0, 23%, 90%);
     --heading-color: hsl(255, 50%, 30%);
     /* --big-text-color: hsl(180, 58%, 50%); */
-    --big-text-color: hsl(221, 69%, 30%);
+    --big-text-color: hsl(180, 58%, 60%) /*hsl(221, 69%, 30%)*/;
     --tooltip-color: black;
 
     --shadow-color: hsl(0, 0%, 50%);
@@ -14,7 +14,8 @@
 
 .dark-theme {
     /* --bg-color: hsl(231, 15%, 18%); */
-    --color: hsl(180, 58%, 90%);
+    /* --color: hsl(180, 58%, 90%); */
+    --color: white;
 
     /* github colors: */
     --bg-color: hsl(216, 28%, 7%);
@@ -69,6 +70,7 @@ h1, h2, h3 {
     margin: 0 auto;
     border-bottom: solid;
     width: 100%;
+    height: 6.6vh;
 }
 
 .footer {
@@ -225,7 +227,8 @@ button {
 
 .fancy-big-text {
     cursor: pointer;
-    color: transparent;
+    /* color: transparent; */
+    color: var(--big-text-color);
     margin: 0.25em;
 
     font-family: 'Meta', sans-serif;
@@ -233,21 +236,17 @@ button {
     text-align: center;
     -webkit-text-stroke: 4px var(--big-text-color);
     
-
     transition: all 500ms;
-    font-variation-settings: 'weight' 900, 'ital' 1;
-    text-shadow: 10px 10px 0px hsl(185, 93%, 41%),
-      15px 15px 0px hsl(310, 99%, 45%),
-      20px 20px 0px hsl(320, 99%, 46%),
-      25px 25px 0px hsl(335, 97%, 49%),
-      40px 40px 7px hsl(257, 58%, 37%);
-      /* 45px 45px 10px */
+    font-variation-settings: 'weight' 100, 'ital' 0;
+    text-shadow: none;
 }
 
 .fancy-big-text:hover {
-    color: var(--big-text-color);
-    font-variation-settings: 'weight' 100, 'ital' 0;
-    text-shadow: none;
+    /* color: var(--big-text-color); */
+    color: transparent;
+    font-variation-settings: 'weight' 900, 'ital' 1;
+    text-shadow: 10px 10px 0px hsl(335, 97%, 49%),
+      15px 15px 0px hsl(257, 58%, 37%)
 }
 
 .fancy-link {
@@ -266,19 +265,75 @@ button {
 }
 
 .card {
-    padding: 2rem;
+    padding-inline: 0.75rem;
+    padding-top: 0.5rem;
     margin-inline: 2em;
     border-radius: 0.5rem;
     background-color: var(--card-bg-color);
-    box-shadow: 5px 5px 5px var(--shadow-color);
+    box-shadow: none;
     transition: ease 150ms;
     border: 1px inset var(--color);
 }
 
 .card:hover {
     cursor: pointer;
-    transform: translate(5px, 5px);
-    box-shadow: none;
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.card:hover div.card-image img.image {
+    animation: fade 6000ms;
+}
+
+.card-image {
+    position: relative;
+    min-height: 9em;
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+/* maybe use background of the ^ instead of this */
+.card-image img {
+    width: 16em;
+    height: 9em;
+    border-radius: 0.5rem;
+    border: 4px solid var(--color);
+    translate: -4px;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: -8em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-image-text {
+    position: absolute;
+    min-width: 16em;
+    left: -8em;
+    bottom: 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
 }
 
 .card-flexbox {

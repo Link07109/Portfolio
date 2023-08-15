@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     return (
@@ -15,9 +15,15 @@ const About = () => {
                 </div>
             </button> */}
 
-            <p>Incoming Senior at UNC Charlotte studying Computer Science</p>
-            <p>7 years of programming experience</p>
             <p>Game, Web, Mobile, and Robotics Developer</p>
+            <p>8 years of programming experience</p>
+            <p>UNC Charlotte computer science graduate</p>
+
+            <h2>Contact Me!</h2>
+            <div className='footer-div'>
+                <FontAwesomeIcon size='xl' icon={faEnvelope} />
+                <a className='fancy-link' href='mailto:valadez.sei@gmail.com' target='_blank' rel='noopener noreferrer'>valadez.sei@gmail.com</a>
+            </div>
         </>
     )
 }
