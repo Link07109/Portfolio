@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[535],{535:(e,t,l)=>{l.r(t),l.d(t,{default:()=>r});var o=l(294);const r=function(e){return o.createElement("h1",{className:"center"},"Hello ",e.title)}}}]);
