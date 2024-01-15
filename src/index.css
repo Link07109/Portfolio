@@ -1,32 +1,44 @@
 .light-theme {
-    --bg-color: hsl(0, 23%, 95%);
+    --bg-color: hsl(46, 55%, 94%);
+    /* hsl(0, 23%, 95%); */
     --color:black;
     /* --color: hsl(249, 11%, 12%); */
+    --accent: hsl(339, 82%, 51%);
+    /* old: hsl(335, 97%, 49%); */
+    
 
-    --card-bg-color: hsl(0, 23%, 90%);
-    --heading-color: hsl(255, 50%, 30%);
+    --card-bg-color: hsl(46, 55%, 89%);
+    /* hsl(0, 22%, 90%); */
+    /* hsl(40, 21%, 95%); */
+    --heading-color: var(--accent);
+    /* hsl(255, 50%, 30%); */
+
     /* --big-text-color: hsl(180, 58%, 50%); */
-    --big-text-color: hsl(180, 58%, 60%) /*hsl(221, 69%, 30%)*/;
+    --big-text-color: hsl(327, 46%, 45%);
+    /* --big-text-color: hsl(180, 58%, 60%) hsl(221, 69%, 30%); */
     --tooltip-color: black;
 
-    --shadow-color: hsl(0, 0%, 50%);
+    --shadow-color: var(--accent);
+    /* hsl(0, 0%, 50%); */
 }
 
 .dark-theme {
     /* --bg-color: hsl(231, 15%, 18%); */
     /* --color: hsl(180, 58%, 90%); */
     --color: white;
+    --accent: hsl(265, 89%, 90%);
 
     /* github colors: */
     --bg-color: hsl(216, 28%, 7%);
     --card-bg-color: hsl(215, 21%, 11%);
 
     /* --card-bg-color: hsl(231, 15%, 18%); */
-    --heading-color: hsl(265, 89%, 90%);
+    --heading-color: var(--accent);
     --big-text-color: var(--color);
     --tooltip-color: white;
 
-    --shadow-color: hsl(231, 15%, 18%);
+    --shadow-color: var(--accent);
+    /* hsl(231, 15%, 18%); */
 }
 
 /* Put all the .dark-theme / .light-theme stuff in here if I ever decide to use this */
@@ -44,6 +56,7 @@ body {
 hr {
     background-color: var(--color);
     border-style: solid;
+    min-width: 18em;
 }
 
 strong {
@@ -54,6 +67,10 @@ strong {
 h1, h2, h3 {
 	color: var(--heading-color);
     text-align: center;
+}
+
+h3 {
+    color: var(--color);
 }
 
 /* Useful when wanting to use the normal color on headings */
@@ -103,11 +120,11 @@ a, a:visited {
 }
 
 a:hover {
-    color: var(--color);
+    color: var(--accent);
 }
 
 .link:hover {
-    color: var(--color);
+    color: var(--accent);
 }
 
 .disabled {
@@ -227,7 +244,6 @@ button {
 
 .fancy-big-text {
     cursor: pointer;
-    /* color: transparent; */
     color: var(--big-text-color);
     margin: 0.25em;
 
@@ -243,10 +259,9 @@ button {
 
 .fancy-big-text:hover {
     /* color: var(--big-text-color); */
-    color: transparent;
     font-variation-settings: 'weight' 900, 'ital' 1;
-    text-shadow: 10px 10px 0px hsl(335, 97%, 49%),
-      15px 15px 0px hsl(257, 58%, 37%)
+    text-shadow: 10px 10px 0px var(--shadow-color);
+        /* 15px 15px 0px hsl(257, 58%, 37%); */
 }
 
 .fancy-link {
@@ -267,18 +282,19 @@ button {
 .card {
     padding-inline: 0.75rem;
     padding-top: 0.5rem;
-    margin-inline: 2em;
     border-radius: 0.5rem;
     background-color: var(--card-bg-color);
     box-shadow: none;
     transition: ease 150ms;
     border: 1px inset var(--color);
+    width: 14.5em;
+    height: 213.44px;
 }
 
 .card:hover {
     cursor: pointer;
     transform: translate(-5px, -5px);
-    box-shadow: 5px 5px 5px var(--shadow-color);
+    box-shadow: 5px 5px 0px var(--shadow-color)
 }
 
 .card:hover div.card-image img.image {
@@ -288,6 +304,7 @@ button {
 .card-image {
     position: relative;
     min-height: 9em;
+    width: 100%;
     text-align: center;
 }
 
@@ -305,15 +322,15 @@ button {
 
 /* maybe use background of the ^ instead of this */
 .card-image img {
-    width: 16em;
-    height: 9em;
+    width: 100%;
+    height: 100%;
     border-radius: 0.5rem;
     border: 4px solid var(--color);
     translate: -4px;
     opacity: 1;
     position: absolute;
     top: 0;
-    left: -8em;
+    left: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -321,12 +338,11 @@ button {
 
 .card-image-text {
     position: absolute;
-    min-width: 16em;
-    left: -8em;
+    width: 100%;
+    left: 0;
     bottom: 10px;
     font-weight: bold;
     color: white;
-    text-shadow: 1px 1px black;
 }
 
 .card-footer {
@@ -350,23 +366,37 @@ button {
 
 .project-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
     grid-auto-columns: 1fr;
     width: min(90%, 70.5rem);
 
-    padding-block: 2rem;
+    padding: 2rem;
     margin: 0 auto;
+    place-items: center;
+    /* background: hsl(0, 23%, 85%); */
 }
 
 /* Responsive Layout */
-@media (min-width: 40em) {
+@media (width < 631px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (width < 945px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 70em) {
+@media (width >= 945px) and (width < 1285px) {
     .project-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (width >= 1285px) {
+    .project-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

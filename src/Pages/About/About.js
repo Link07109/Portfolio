@@ -15,9 +15,8 @@ const About = () => {
                 </div>
             </button> */}
 
-            <p>Game, Web, Mobile, and Robotics Developer</p>
-            <p>8 years of programming experience</p>
-            <p>UNC Charlotte computer science graduate</p>
+            <p>Hey! I'm Ivan, a recent college grad interested in game and web development!</p>
+            <p>I mostly work with Godot for games and React for web, but I'm familiar with some other technologies used in the field as well!</p>
 
             <h2>Contact Me!</h2>
             <div className='footer-div'>

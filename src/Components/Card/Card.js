@@ -21,7 +21,7 @@ const Card = ({ title, year, description, link, priv, image='https://cdn.discord
                 <a href={link}
                     target='_blank'
                     rel='noopener noreferrer'>
-                    <h3 className='fancy-link'>{title}</h3>
+                    <h3 className='link fancy-link'>{title}</h3>
                 </a>
                 {!priv && <FontAwesomeIcon size='xl' icon={faGithub} />}
             </div>
