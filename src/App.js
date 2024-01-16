@@ -8,18 +8,6 @@ import Page404 from './Pages/Page404'
 
 const App = () => {
 
-    // const routes = [{
-    //     path: '/', element: <Page />,
-    //     children: [
-    //         { index: true, element: <Home /> },
-    //         { path: '/Portfolio', element: <Home /> },
-
-    //         { path: '/about', element: <About /> },
-
-    //         { path: '*', element: <Page404 /> },
-    //     ]
-    // }]
-
     return (
         <React.StrictMode>
             <MemoryRouter>

@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const Card = ({ title, year, description, link, priv, image='https://cdn.discordapp.com/attachments/831304128033587270/1135333595498684446/tokyo.png', gif }) => {
+const Card = ({ title, year, description, itch, git, priv, image='https://cdn.discordapp.com/attachments/831304128033587270/1135333595498684446/tokyo.png', gif }) => {
 
     return (
         <article className='card center-container'>
@@ -15,15 +15,19 @@ const Card = ({ title, year, description, link, priv, image='https://cdn.discord
                 
                 <div className='card-image-text'>{description}</div>
             </div>
-            {/* <p>{description}</p> */}
 
             <div className='card-footer'>
-                <a href={link}
+                <a href={itch}
                     target='_blank'
                     rel='noopener noreferrer'>
                     <h3 className='link fancy-link'>{title}</h3>
                 </a>
-                {!priv && <FontAwesomeIcon size='xl' icon={faGithub} />}
+
+                {!priv && <a href={git}
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    <h3 className='link'><FontAwesomeIcon size='xl' icon={faGithub} /></h3>
+                </a>}
             </div>
         </article>
     )
