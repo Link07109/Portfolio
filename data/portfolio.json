@@ -1,0 +1,14 @@
+{
+    "title": "Portfolio",
+    "year": 2022,
+    "description_short": "Portfolio website made using React",
+    "description_long": "This website was made to have a place to showcase my projects to employers",
+    "tech_stack": "React, GitHub Pages",
+
+    "image": "https://cdn.discordapp.com/attachments/831304128033587270/1206775181146857512/image.png?ex=65dd3bf7&is=65cac6f7&hm=2ffe28ad4deedd5eff5ce685983d4f0ccf9f1e577c52e25a0d6c85e70c51a9f7&",
+    "gif": "https://cdn.discordapp.com/attachments/831304128033587270/1206775181146857512/image.png?ex=65dd3bf7&is=65cac6f7&hm=2ffe28ad4deedd5eff5ce685983d4f0ccf9f1e577c52e25a0d6c85e70c51a9f7&",
+    "video": "",
+
+    "itch_io": "",
+    "github": "https://github.com/Link07109/Portfolio"
+}

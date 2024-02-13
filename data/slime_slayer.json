@@ -1,0 +1,14 @@
+{
+    "title": "Slime Slayer",
+    "year": 2018,
+    "description_short": "2D Platformer made using Godot",
+    "description_long": "This game was made for the AP Computer Science Principles Create Project",
+    "tech_stack": "Godot",
+
+    "image": "https://cdn.discordapp.com/attachments/831304128033587270/1206782041794805760/image.png?ex=65dd425b&is=65cacd5b&hm=562ed537d349d37f651118cf33501427110dc114a1ef4058718aecff4ae6415c&",
+    "gif": "https://cdn.discordapp.com/attachments/831304128033587270/1206782041794805760/image.png?ex=65dd425b&is=65cacd5b&hm=562ed537d349d37f651118cf33501427110dc114a1ef4058718aecff4ae6415c&",
+    "video": "https://drive.google.com/file/d/1eMF775J8V3E932riqqZJtAA2-c17WJTX/preview",
+
+    "itch_io": "",
+    "github": "https://github.com/Link07109/SlimeSlayer"
+}

@@ -1,0 +1,14 @@
+{
+    "title": "Falcon Scout App",
+    "year": 2020,
+    "description_short": "Mobile App made using React Native",
+    "description_long": "This app was used for the 2020 FRC (FIRST Robotics Competition) season to manage scouting data",
+    "tech_stack": "React Native, MongoDB, Azure Cloud Functions",
+
+    "image": "https://cdn.discordapp.com/attachments/831304128033587270/1206765574026166352/frc5190.png?ex=65dd3305&is=65cabe05&hm=efe4902a3d51b2aa70f6c8b753dae615c66d27265227273077b24109089b3c1b&",
+    "gif": "https://cdn.discordapp.com/attachments/831304128033587270/1206765574026166352/frc5190.png?ex=65dd3305&is=65cabe05&hm=efe4902a3d51b2aa70f6c8b753dae615c66d27265227273077b24109089b3c1b&",
+    "video": "",
+
+    "itch_io": "",
+    "github": "https://github.com/FRC5190/FalconScoutApp"
+}

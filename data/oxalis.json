@@ -1,0 +1,14 @@
+{
+    "title": "Oxalis",
+    "year": 2023,
+    "description_short": "2D Action-Adventure made using Godot",
+    "description_long": "This game was made as the capstone project for ITCS 4232 (Game Design & Development Studio)",
+    "tech_stack": "Godot",
+
+    "image": "https://cdn.discordapp.com/attachments/831304128033587270/1196627736702238790/image.png?ex=65b8516c&is=65a5dc6c&hm=2b66cbc09ae097e81dbe6067dba8e2557285f3f5c1ea5918135096b454ee3afb&",
+    "gif": "https://cdn.discordapp.com/attachments/831304128033587270/1196626930607345664/OxalisGIF.gif?ex=65b850ac&is=65a5dbac&hm=2380cfac4bca4b5a86656bb5e68162012153ef85b0cd7afe3d4492c04f11cc97&",
+    "video": "https://drive.google.com/file/d/1Rq6QTHAuUum-I24ENK5m_BWZyQB6wo2k/preview",
+
+    "itch_io": "",
+    "github": "https://github.com/Link07109/Oxalis"
+}

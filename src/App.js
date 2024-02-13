@@ -3,6 +3,7 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 
 import Page from './Pages/Page'
 import Home from './Pages/Home'
+import Project from './Pages/Project'
 import About from './Pages/About'
 import Page404 from './Pages/Page404'
 
@@ -14,6 +15,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<Page />} >
                         <Route index='true' element={<Home />} />
+                        <Route path='/project' element={<Project />} />
                         <Route path='/about' element={<About />} />
                         <Route path='*' element={<Page404 />} />
                     </Route>

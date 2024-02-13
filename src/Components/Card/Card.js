@@ -1,34 +1,32 @@
 import React, { memo } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const Card = ({ title, year, description, itch, git, priv, image='https://cdn.discordapp.com/attachments/831304128033587270/1135333595498684446/tokyo.png', gif }) => {
+const Card = ({ priv=false, data }) => {
+    const navigate = useNavigate()
 
     return (
-        <article className='card center-container'>
+        <article className='card center-container'>            
             <div className='card-image'>
-                <img src={gif} className='gif' />
-                <img src={image} className='image' />
-                {/* onMouseOver={e => (e.currentTarget.src = gif)}
-                onMouseOut={e => (e.currentTarget.src = image)} */}
-                
-                <div className='card-image-text'>{description}</div>
+                <img src={data.gif} />
+                <img src={data.image} className='image' />                
             </div>
 
             <div className='card-footer'>
-                <a href={itch}
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <h3 className='link fancy-link'>{title}</h3>
-                </a>
+                <button className='nav-button' onClick={() => navigate('/project', {state: {data}})}>
+                    <h3 className='link fancy-link'>{data.title} ({data.year})</h3>
+                </button>
 
-                {!priv && <a href={git}
+                {!priv && <a href={data.github}
                     target='_blank'
                     rel='noopener noreferrer'>
                     <h3 className='link'><FontAwesomeIcon size='xl' icon={faGithub} /></h3>
                 </a>}
             </div>
+
+            <div style={{paddingBottom: '1em'}}>{data.description_short}</div>
         </article>
     )
 }
