@@ -73,7 +73,7 @@ h3 {
     margin: 0 auto;
     border-bottom: solid;
     width: 100%;
-    height: 6.6vh;
+    height: 6.5vh;
 }
 
 .footer {
@@ -141,7 +141,7 @@ button {
 .scrollable-main {
     /* move below the header */
     position: absolute;
-    top: 70px;
+    top: 7.5vh;
     bottom: 0;
 
     /* center the children */
@@ -361,7 +361,7 @@ button {
     display: grid;
     gap: 2rem;
     grid-auto-columns: 1fr;
-    width: min(90%, 70.5rem);
+    /* width: min(90%, 70.5rem); */
 
     padding: 2rem;
     margin: 0 auto;
@@ -376,13 +376,13 @@ button {
     }
 }
 
-@media (width < 945px) {
+@media (width < 1080px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (width >= 945px) and (width < 1285px) {
+@media (width >= 1080px) and (width < 1285px) {
     .project-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -390,6 +390,6 @@ button {
 
 @media (width >= 1285px) {
     .project-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
