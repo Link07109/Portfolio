@@ -284,6 +284,11 @@ button {
     box-shadow: 5px 5px 0px var(--shadow-color)
 }
 
+.card:hover h3.fancy-link {
+    background-size: 100% 3px;
+    color: var(--accent)
+}
+
 .card:hover div.card-image img.image {
     animation: fade 6000ms;
 }
