@@ -4,22 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const Card = ({ priv=false, data }) => {
+const Card = ({ data }) => {
     const navigate = useNavigate()
 
     return (
-        <article className='card center-container'>            
+        <article className='card center-container' onClick={() => navigate('/project', {state: {data}})}>
             <div className='card-image'>
                 <img src={data.gif} />
-                <img src={data.image} className='image' />                
+                <img src={data.image} className='image' />
             </div>
 
             <div className='card-footer'>
-                <button className='nav-button' onClick={() => navigate('/project', {state: {data}})}>
-                    <h3 className='link fancy-link'>{data.title} ({data.year})</h3>
-                </button>
+                <h3 className='link fancy-link'>{data.title} ({data.year})</h3>
 
-                {!priv && <a href={data.github}
+                {!data.priv && <a href={data.github}
                     target='_blank'
                     rel='noopener noreferrer'>
                     <h3 className='link'><FontAwesomeIcon size='xl' icon={faGithub} /></h3>

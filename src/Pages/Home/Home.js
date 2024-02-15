@@ -10,6 +10,8 @@ import falcon_scouter_data from '../../../data/falcon_scouter.json'
 const Card = React.lazy(() => import('../../Components/Card'))
 
 const Home = () => {
+    const gamesData = [oxalis_data, guardian_of_the_forest_data, slime_slayer_data]
+    const webMobileData = [portfolio_data, falcon_scout_app_data, falcon_scouter_data]
 
     return (
         <>
@@ -17,19 +19,15 @@ const Home = () => {
             {/* <h2>Software Developer</h2> */}
 
             <hr />
-            <h3 className='p-color'>Games</h3>
+            <h2 className='p-color'>Games</h2>
             <div className='project-grid'>
-                <Card data={oxalis_data} />
-                <Card data={guardian_of_the_forest_data} />
-                <Card priv='true' data={slime_slayer_data} />
+                {gamesData.map((data, i) => <Card data={data} key={i} />)}
             </div>
 
             <hr />
-            <h3 className='p-color'>Web & Mobile Apps</h3>
+            <h2 className='p-color'>Web & Mobile Apps</h2>
             <div className='project-grid'>
-                <Card data={portfolio_data} />
-                <Card priv='true' data={falcon_scout_app_data} />
-                <Card data={falcon_scouter_data} />
+                {webMobileData.map((data, i) => <Card data={data} key={i} />)}
             </div>
         </>
     )

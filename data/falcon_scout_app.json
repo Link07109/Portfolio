@@ -10,5 +10,6 @@
     "video": "",
 
     "itch_io": "",
-    "github": "https://github.com/FRC5190/FalconScoutApp"
+    "github": "https://github.com/FRC5190/FalconScoutApp",
+    "priv": true
 }
