@@ -25,7 +25,7 @@ const Project = () => {
                 <p>Tech stack used: {state.data.tech_stack}</p>
             </div>
             
-            <div className='project-grid'>
+            <div className='project'>
                 {state.data.gif != state.data.image && <img src={state.data.gif} width='640' height='360' />}
 
                 {state.data.video && <iframe width='640' height='360'

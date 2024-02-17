@@ -16,9 +16,9 @@
     --color: white;
     --accent: hsl(265, 89%, 90%);
 
-    /* github colors: */
-    --bg-color: hsl(218, 80%, 2%);
-    --card-bg-color: hsl(216, 28%, 7%);
+    --bg-color: hsl(237, 22%, 17%);
+    --card-bg-color: hsl(236, 22%, 29%);
+    /* hsl(216, 28%, 7%); */
 
     --heading-color: var(--accent);
     --big-text-color: var(--color);
@@ -275,7 +275,7 @@ button {
     border: 1px inset var(--color);
     width: 16em;
     /* height: 213.44px; */
-    height: 250px;
+    min-height: 250px;
 }
 
 .card:hover {
@@ -362,6 +362,17 @@ button {
     gap: 2rem;
     grid-auto-columns: 1fr;
     /* width: min(90%, 70.5rem); */
+
+    padding: 2rem;
+    margin: 0 auto;
+    place-items: center;
+}
+
+.project {
+    display: grid;
+    gap: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
 
     padding: 2rem;
     margin: 0 auto;
