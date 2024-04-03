@@ -5,8 +5,8 @@
     "description_long": "This website was made to have a place to showcase my projects to employers",
     "tech_stack": "React, GitHub Pages",
 
-    "image": "https://cdn.discordapp.com/attachments/831304128033587270/1206775181146857512/image.png?ex=65f8eb77&is=65e67677&hm=b34cfb392925009fe6e7637b805ce751afc6a588db475ff31c4380487b76f0ed&",
-    "gif": "https://cdn.discordapp.com/attachments/831304128033587270/1206775181146857512/image.png?ex=65f8eb77&is=65e67677&hm=b34cfb392925009fe6e7637b805ce751afc6a588db475ff31c4380487b76f0ed&",
+    "image": "./images/portfolio.png",
+    "gif": "./images/portfolio.png",
     "video": "",
 
     "itch_io": "",

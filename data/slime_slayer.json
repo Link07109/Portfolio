@@ -5,8 +5,8 @@
     "description_long": "This game was made for the AP Computer Science Principles Create Project",
     "tech_stack": "Godot",
 
-    "image": "https://cdn.discordapp.com/attachments/831304128033587270/1206782041794805760/image.png?ex=65f8f1db&is=65e67cdb&hm=42a43b3e5a0be0befbf2ce3f8f34462756003b03085603e3b37a26d060f29f83&",
-    "gif": "https://cdn.discordapp.com/attachments/831304128033587270/1206782041794805760/image.png?ex=65f8f1db&is=65e67cdb&hm=42a43b3e5a0be0befbf2ce3f8f34462756003b03085603e3b37a26d060f29f83&",
+    "image": "./images/slime_slayer.png",
+    "gif": "./images/slime_slayer.png",
     "video": "https://drive.google.com/file/d/1eMF775J8V3E932riqqZJtAA2-c17WJTX/preview",
 
     "itch_io": "",
