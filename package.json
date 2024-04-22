@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "portfolio website",
   "main": "index.js",
-  "homepage": "http://Link07109.github.io/Portfolio",
+  "homepage": "https://Link07109.github.io/Portfolio/",
   "scripts": {
     "start": "webpack serve --config ./webpack.config.js --mode=development",
-    "build": "webpack --mode=production",
+    "build": "webpack --config ./webpack.config.js --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

@@ -5,8 +5,8 @@
     "description_long": "This is the second game created by Gala Games for ITSC 4230 (Intro to Game Design & Development)",
     "tech_stack": "GameMaker",
 
-    "image": "./images/gotf_image.png",
-    "gif": "./images/gotfGIF.gif",
+    "image": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/gotf_image.png",
+    "gif": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/gotfGIF.gif",
     "video": "https://www.youtube.com/embed/Dpq2MMIRBxU",
 
     "itch_io": "",

@@ -5,8 +5,8 @@
     "description_long": "This game was made as the capstone project for ITCS 4232 (Game Design & Development Studio)",
     "tech_stack": "Godot",
 
-    "image": "./images/oxalis_image.png",
-    "gif": "./images/OxalisGIF.gif",
+    "image": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/oxalis_image.png",
+    "gif": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/OxalisGIF.gif",
     "video": "https://drive.google.com/file/d/1Rq6QTHAuUum-I24ENK5m_BWZyQB6wo2k/preview",
 
     "itch_io": "",

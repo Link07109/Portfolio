@@ -5,8 +5,8 @@
     "description_long": "This app was used for the 2019 FRC (FIRST Robotics Competition) season to manage scouting data",
     "tech_stack": "Ionic Angular, Cloud Firestore",
 
-    "image": "./images/frc5190.png",
-    "gif": "./images/frc5190.png",
+    "image": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/frc5190.png",
+    "gif": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/frc5190.png",
     "video": "",
 
     "itch_io": "",

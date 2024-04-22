@@ -5,8 +5,8 @@
     "description_long": "This website was made to have a place to showcase my projects to employers",
     "tech_stack": "React, GitHub Pages",
 
-    "image": "./images/portfolio.png",
-    "gif": "./images/portfolio.png",
+    "image": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/portfolio.png",
+    "gif": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/portfolio.png",
     "video": "",
 
     "itch_io": "",
