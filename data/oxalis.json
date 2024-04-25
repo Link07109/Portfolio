@@ -2,7 +2,7 @@
     "title": "Oxalis",
     "year": 2023,
     "description_short": "2D Action-Adventure made using Godot",
-    "description_long": "This game was made as the capstone project for ITCS 4232 (Game Design & Development Studio)",
+    "description_long": "This game was made as the capstone project for ITCS 4232 (Game Design & Development Studio). Solo project that was worked on over the course of a semester. Art assets are not mine. HeartBeast's RPG tutorial series was used as a starting point.",
     "tech_stack": "Godot",
 
     "image": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/oxalis_image.png",

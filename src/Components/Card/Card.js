@@ -17,7 +17,8 @@ const Card = ({ data }) => {
             <div className='card-footer'>
                 <h3 className='link fancy-link'>{data.title} ({data.year})</h3>
 
-                {!data.priv && <a href={data.github}
+                {!data.priv && <a onClick={(e) => e.stopPropagation()}
+                    href={data.github}
                     target='_blank'
                     rel='noopener noreferrer'>
                     <h3 className='link'><FontAwesomeIcon size='xl' icon={faGithub} /></h3>
