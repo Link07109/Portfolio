@@ -18,13 +18,13 @@ const Project = () => {
                 rel='noopener noreferrer'>
                 <h3 className='link'><FontAwesomeIcon size='xl' icon={faGithub} /></h3>
             </a>}
-            
+
             <div className='project-grid'>
                 <p>{state.data.description_short}</p>
                 <p>{state.data.description_long}</p>
                 <p>Tech stack used: {state.data.tech_stack}</p>
             </div>
-            
+
             <div className='project'>
                 {state.data.gif != state.data.image && <img src={state.data.gif} width='640' height='360' />}
 

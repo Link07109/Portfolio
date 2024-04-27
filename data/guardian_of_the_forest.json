@@ -2,7 +2,7 @@
     "title": "Guardian of the Forest",
     "year": 2021,
     "description_short": "2D Metroidvania made using GameMaker",
-    "description_long": "This is the second game created by Gala Games for ITSC 4230 (Intro to Game Design & Development)",
+    "description_long": "This is the second game created by Gala Games for ITSC 4230 (Intro to Game Design & Development). This game was worked on over the course of a month by a group of 4 people (credits in the README). I did all the programming and level design on this project.",
     "tech_stack": "GameMaker",
 
     "image": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/gotf_image.png",
