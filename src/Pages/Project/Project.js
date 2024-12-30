@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faItchIo } from '@fortawesome/free-brands-svg-icons'
 
 const Project = () => {
     const { state } = useLocation()
@@ -18,6 +18,11 @@ const Project = () => {
                 rel='noopener noreferrer'>
                 <h3 className='link'><FontAwesomeIcon size='xl' icon={faGithub} /></h3>
             </a>}
+            {state.data.itch_io && <a href={state.data.itch_io}
+                target='_blank'
+                rel='noopener noreferrer'>
+                <h3 className='link'><FontAwesomeIcon size='xl' icon={faItchIo} /></h3>
+            </a>}
 
             <div className='project-grid'>
                 <p>{state.data.description_short}</p>
@@ -26,7 +31,7 @@ const Project = () => {
             </div>
 
             <div className='project'>
-                {state.data.gif != state.data.image && <img src={state.data.gif} width='640' height='360' />}
+                {state.data.gif && <img src={state.data.gif} width='640' height='360' />}
 
                 {state.data.video && <iframe width='640' height='360'
                     src={state.data.video}

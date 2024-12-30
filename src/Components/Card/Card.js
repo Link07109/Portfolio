@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faItchIo } from '@fortawesome/free-brands-svg-icons'
 
 const Card = ({ data }) => {
     const navigate = useNavigate()
@@ -22,6 +22,12 @@ const Card = ({ data }) => {
                     target='_blank'
                     rel='noopener noreferrer'>
                     <h3 className='link'><FontAwesomeIcon size='xl' icon={faGithub} /></h3>
+                </a>}
+                {data.itch_io && <a onClick={(e) => e.stopPropagation()}
+                    href={data.itch_io}
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    <h3 className='link'><FontAwesomeIcon size='xl' icon={faItchIo} /></h3>
                 </a>}
             </div>
 
