@@ -16,7 +16,6 @@ const Home = () => {
     return (
         <>
             <h1 className='fancy-big-text'>Ivan Valadez</h1>
-            {/* <h2>Software Developer</h2> */}
 
             <hr />
             <h2 className='p-color'>Games</h2>
