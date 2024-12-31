@@ -10,7 +10,10 @@ const Project = () => {
     return (
         <>
             <div style={{paddingTop: '2em'}}></div>
-            <img src={state.data.image} width='640' height='360' />
+            {!state.data.web_playable && <img src={state.data.image} width='640' height='360' />}
+            {state.data.web_playable &&
+                <iframe frameBorder="0" src="https://itch.io/embed-upload/12384401?color=5d8acf" allowFullscreen="" width="640" height="360"><a href="https://rir1nku.itch.io/tower-of-ascension">Play Tower of Ascension on itch.io</a></iframe>
+            }
 
             <h2 className='p-color'>{state.data.title} ({state.data.year})</h2>
             {!state.data.priv && <a href={state.data.github}
