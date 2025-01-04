@@ -30,7 +30,7 @@ const Project = () => {
             <div className='project-grid'>
                 <p>{state.data.description_short}</p>
                 <p>{state.data.description_long}</p>
-                <p>Tech stack used: {state.data.tech_stack}</p>
+                <p>Built with: {state.data.tech_stack}</p>
             </div>
 
             <div className='project'>

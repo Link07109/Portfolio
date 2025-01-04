@@ -274,7 +274,7 @@ button {
     transition: ease 150ms;
     border: 1px inset var(--color);
     width: 16em;
-    /* height: 213.44px; */
+    height: 100%;
     min-height: 250px;
 }
 

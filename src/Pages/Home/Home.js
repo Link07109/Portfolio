@@ -16,15 +16,18 @@ const Home = () => {
 
     return (
         <>
-            <h1 className='fancy-big-text'>Ivan Valadez</h1>
+            <br/>
+            <h3>Hi! I make games, web applications, and robotics code!</h3>
+            <h3>You can see my showcased projects below!</h3>
 
-            <hr />
+            <br/>
             <h2 className='p-color'>Games</h2>
+            <p>You can play all of these on my <a href="https://rir1nku.itch.io/">itch.io</a> page!</p>
             <div className='project-grid'>
                 {gamesData.map((data, i) => <Card data={data} key={i} />)}
             </div>
 
-            <hr />
+            <br/>
             <h2 className='p-color'>Web & Mobile Apps</h2>
             <div className='project-grid'>
                 {webMobileData.map((data, i) => <Card data={data} key={i} />)}
