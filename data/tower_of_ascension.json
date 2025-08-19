@@ -3,7 +3,7 @@
     "year": 2024,
     "description_short": "Reach the top of the tower! Try not to fall back down!",
     "description_long": "My submission for Karl Zylinski's Odin Holiday Jam! Solo project.",
-    "tech_stack": "Odin, raylib, ldtk",
+    "tech_stack": "Odin, Raylib, Ldtk, Aseprite",
 
     "image": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/ToA_image.png",
     "gif": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/ToA_image.png",

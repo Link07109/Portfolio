@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 
+import halloween_project_2_data from '../../../data/halloween_project_2_data.json'
 import tower_of_ascension_data from '../../../data/tower_of_ascension.json'
 import oxalis_data from '../../../data/oxalis.json'
 import guardian_of_the_forest_data from '../../../data/guardian_of_the_forest.json'
@@ -11,7 +12,7 @@ import falcon_scouter_data from '../../../data/falcon_scouter.json'
 const Card = React.lazy(() => import('../../Components/Card'))
 
 const Home = () => {
-    const gamesData = [tower_of_ascension_data, oxalis_data, guardian_of_the_forest_data, slime_slayer_data]
+    const gamesData = [halloween_project_2_data, tower_of_ascension_data, oxalis_data, guardian_of_the_forest_data, slime_slayer_data]
     const webMobileData = [portfolio_data, falcon_scout_app_data, falcon_scouter_data]
 
     return (

@@ -1,0 +1,16 @@
+{
+    "title": "Halloween Project 2",
+    "year": 2024,
+    "description_short": "Find candy before going insane!",
+    "description_long": "Navigate a haunted house while your sanity slips away! Find the 2 pieces of candy to win!",
+    "tech_stack": "Odin, Raylib, Aseprite",
+
+    "image": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/HalloweenProject2.png",
+    "gif": "https://raw.githubusercontent.com/Link07109/Portfolio/master/public/images/HalloweenProject2.png",
+    "video": "https://www.youtube.com/embed/58PttWM9RGY",
+
+    "itch_io": "https://rir1nku.itch.io/halloween_project_2",
+    "web_playable": false,
+    "github": "https://github.com/Link07109/Halloween-Project-2",
+    "priv": false
+}
